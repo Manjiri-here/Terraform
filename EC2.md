@@ -1,25 +1,56 @@
-AWS instance(in terms of terraform)/ EC2 instance:
+AWS instance(in terms of terraform)/ EC2 instance using ingress, egress, security groups:
 
 ----
-data "aws_ami" "ubuntu" {
-  most_recent = true
-  filter {
-    name = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
-  }
-  filter {
-    name = "virtualization-type"
-    values = ["hvm"]
-  }
-  owners = ["099720109477"] # Canonical
+provider "aws" {
+  region = "us-east-1"
 }
+
+data "aws_vpc" "default" {
+  default = true
+}
+
+data "aws_ssm_parameter" "my_instance" {
+  name = "/aws/service/canonical/ubuntu/server/jammy/stable/current/amd64/hvm/ebs-gp2/ami-id"
+}
+
 resource "aws_instance" "example" {
-  ami = data.aws_ami.ubuntu.id                 # <data_type>.<provider_type>.<your_custom_name>.<attribute>, this is the desired format to call resource from data
   instance_type = "t3.micro"
+  ami = data.aws_ssm_parameter.my_instance.value
+  key_name = "new-aws-account"
+    vpc_security_group_ids = [
+    aws_security_group.app_sg.id]
+
   tags = {
-    Name = "HelloWorld"
+    Name = "shellscript"
   }
 }
+
+  resource "aws_security_group" "app_sg" {
+  name        = "app-sg"
+  description = "Allow SSH and App traffic"
+  vpc_id      = data.aws_vpc.default.id
+
+  
+  tags = {
+    Name = "app-sg"
+  }
+  
+}
+
+resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
+  security_group_id = aws_security_group.app_sg.id
+  cidr_ipv4         = "0.0.0.0/0"   # Use your IP in real setups
+  ip_protocol       = "tcp"
+  from_port         = 22
+  to_port           = 22
+}
+
+resource "aws_vpc_security_group_egress_rule" "allow_all_outbound" {
+  security_group_id = aws_security_group.app_sg.id
+  cidr_ipv4         = "0.0.0.0/0"
+  ip_protocol       = "-1"
+}
+
 ----
  
 Explanation:
