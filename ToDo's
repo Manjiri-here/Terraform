@@ -1,1 +1,3 @@
 1) Save a state file remotely on cloud with DynamoDB table for locking
+
+2) Practice multi environent scenario in terraform, how will you manage t?
