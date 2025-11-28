@@ -7,3 +7,5 @@
 4) Practice workspaces in terraform
 
 5) Create blue-green deployment and switch traffic between them
+
+6) Manage secrets in Terraform
