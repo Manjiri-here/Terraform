@@ -9,3 +9,5 @@
 5) Create blue-green deployment and switch traffic between them
 
 6) Manage secrets in Terraform
+
+7) Try this- delete only 1 resource using terraform
