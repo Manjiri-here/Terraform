@@ -4,4 +4,6 @@
 
 3) Try using terraformer tool once and practice it for few resources.
 
-4) Practice workspace
+4) Practice workspaces in terraform
+
+5) Create blue-green deployment and switch traffic between them
