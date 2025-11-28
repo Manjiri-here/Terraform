@@ -1,6 +1,6 @@
 1) Save a state file remotely on cloud with DynamoDB table for locking
 
-2) Practice multi environent scenario in terraform, how will you manage t?
+2) Practice multi environent scenario in terraform, how will you manage it?
 
 3) Try using terraformer tool once and practice it for few resources.
 
@@ -11,3 +11,5 @@
 6) Manage secrets in Terraform
 
 7) Try this- delete only 1 resource using terraform
+
+8) Write a terraform code for creating EKS using variables and for different environments.
