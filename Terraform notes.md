@@ -5,7 +5,7 @@ Terraform interview questions: https://media.licdn.com/dms/document/media/v2/D4E
 How to import resources in terraform: If your main.tf file already contains resources which are running on AWS then you can create another folder and create main.tf file inside to import below resource.  Import steps are as below:
 1. Note down the resource identifier: Like for ec2 I have:  i-07159fd97f818e966
 
-2. Write basic resource block(also called stubs), no need to write full details: Only put resource name correctly   provider "aws" {
+2. Write basic resource block in .tf file (also called stubs), no need to write full details: Only put resource name correctly   provider "aws" {
        region = "us-east-1"
        }
    resource "aws_instance" “terraform-import” {
@@ -16,7 +16,7 @@ terraform import aws_instance.terraform-import i-07159fd97f818e966
 
 Now details will be populated in the .tfstate file once the above step is completed.
 
-4. Now run: terraform state show aws_instance.terraform-import
+4. Now run: terraform state show aws_instance.terraform-import. Also check use of ‘% terraform plan -generate-config-out=generated.tf’ here, looks like we can automatically copy the state file to main.tf file.
 5. Now you will see a big output. Copy that and paste it in main.tf file and edit it to keep only the required fields, no need to keep such huge file/info.
 6. Now run “terraform plan”: (if you get errors read them carefully and troubleshoot) I had got error because I had kept almost all the fields which we get as output in step 4. To fix the error I kept only minimum fields and the error got fixed. Refer terraform directory under Devops to see an example for this in older ‘terraform_import’  manjiri@Abhis-MacBook-Pro import_folder % terraform plan aws_instance.terraform-import: Refreshing state... [id=i-07159fd97f818e966] No changes. Your infrastructure matches the configuration. Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed. 
 — 
