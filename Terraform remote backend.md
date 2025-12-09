@@ -8,6 +8,7 @@ Creating Terraform remote backend:
     "Location": "/my-terraform-state-bucket-08122025"
 }
 
+<img width="1550" height="451" alt="image" src="https://github.com/user-attachments/assets/97e465dd-7c5d-4cb0-aae2-7686c5fba172" />
 
 
 1. Enable versioning: (Purpose: rollback if your state gets corrupted.) Now enable versioning for the above created bucket  aws s3api put-bucket-versioning \   --bucket my-terraform-state-bucket-08122025 \   --versioning-configuration Status=Enabled 
@@ -83,3 +84,5 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.  5) Once above step is done you will see the state being backed up in s3
 ￼
+<img width="1792" height="407" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/3481e2d8-0ab3-44d5-a710-7daaecfa2483" />
+
