@@ -11,8 +11,8 @@ Creating Terraform remote backend:
 <img width="1550" height="451" alt="image" src="https://github.com/user-attachments/assets/97e465dd-7c5d-4cb0-aae2-7686c5fba172" />
 
 
-1. Enable versioning: (Purpose: rollback if your state gets corrupted.) Now enable versioning for the above created bucket  aws s3api put-bucket-versioning \   --bucket my-terraform-state-bucket-08122025 \   --versioning-configuration Status=Enabled 
-2. Create dyanmodb table for state locking: (stop multiple users from running terraform apply at the same time and corrupting state.)  aws dynamodb create-table \  --table-name terraform-lock-table \   --attribute-definitions AttributeName=LockID,AttributeType=S \   --key-schema AttributeName=LockID,KeyType=HASH \   --billing-mode PAY_PER_REQUEST  Output:  {
+2. Enable versioning: (Purpose: rollback if your state gets corrupted.) Now enable versioning for the above created bucket  aws s3api put-bucket-versioning \   --bucket my-terraform-state-bucket-08122025 \   --versioning-configuration Status=Enabled 
+3. Create dyanmodb table for state locking: (stop multiple users from running terraform apply at the same time and corrupting state.)  aws dynamodb create-table \  --table-name terraform-lock-table \   --attribute-definitions AttributeName=LockID,AttributeType=S \   --key-schema AttributeName=LockID,KeyType=HASH \   --billing-mode PAY_PER_REQUEST  Output:  {
     "TableDescription": {
         "AttributeDefinitions": [
             {
@@ -55,7 +55,7 @@ Creating Terraform remote backend:
   }
 
 
-4. Now you will need to do ‘terraform init’ as you have added new backend block, as below: 
+5. Now you will need to do ‘terraform init’ as you have added new backend block, as below: 
 % terraform init
 Initializing the backend...
 Do you want to copy existing state to the new backend?
