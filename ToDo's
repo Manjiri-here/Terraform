@@ -15,3 +15,5 @@
 8) Write a terraform code for creating EKS ,VPC ,lamdba, RDS  using variables and for different environments.
 
 9) Practice using output values in terraform.
+
+10) Try using terraform graph command and explore its use.
