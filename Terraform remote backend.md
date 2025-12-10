@@ -86,3 +86,8 @@ commands will detect it and remind you to do so if necessary.  5) Once above
 ￼
 <img width="1792" height="407" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/3481e2d8-0ab3-44d5-a710-7daaecfa2483" />
 
+# Process to remove remote backed:
+
+If you want to remove S3 as the backend, first delete the backend block from your main.tf. 
+After removing it, run terraform init. Terraform will show options for re-initializing; choose the one that says terraform init -migrate-state. 
+This will migrate your state back to local. Once the migration is done, you’ve already removed the backend block, so just run terraform init again to finalize the local setup. At that point, the remote backend is no longer used, and you can safely delete the DynamoDB table and S3 bucket from AWS.
