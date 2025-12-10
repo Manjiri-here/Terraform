@@ -1,4 +1,4 @@
-1) Save a state file remotely on cloud with DynamoDB table for locking
+1) Save a state file remotely on cloud using S3 and use DynamoDB table for state locking- Done. Notes added in this reposiotries root folder
 
 2) Practice multi environent scenario in terraform, how will you manage it?
 
