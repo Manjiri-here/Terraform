@@ -17,3 +17,5 @@
 9) Practice using output values in terraform.
 
 10) Try using terraform graph command and explore its use.
+
+11) Explore server-side encryption and access control policies for s3 bucket created as remote backend.
