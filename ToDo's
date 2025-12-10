@@ -13,3 +13,5 @@
 7) Try this- delete only 1 resource using terraform
 
 8) Write a terraform code for creating EKS ,VPC ,lamdba, RDS  using variables and for different environments.
+
+9) Practice using output values in terraform.
