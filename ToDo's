@@ -22,4 +22,4 @@
 
 12) Use 'terraform state mv' and 'terraform console' command to clarify its usage.
 
-13) Practice managing secrets in terraform using secrets manager.
+13) Practice managing secrets in terraform using secrets manager an hcl.
