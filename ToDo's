@@ -19,3 +19,5 @@
 10) Try using terraform graph command and explore its use.
 
 11) Explore server-side encryption and access control policies for s3 bucket created as remote backend.
+
+12) Use 'terraform state mv' and 'terraform console' command to clarify its usage.
