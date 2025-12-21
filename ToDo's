@@ -21,3 +21,5 @@
 11) Explore server-side encryption and access control policies for s3 bucket created as remote backend.
 
 12) Use 'terraform state mv' and 'terraform console' command to clarify its usage.
+
+13) Practice managing secrets in terraform using secrets manager.
