@@ -23,3 +23,5 @@
 13) Practice managing secrets in terraform using secrets manager and terraform hcl.
 
 14) How to rollback failed deployment in terraform?
+
+15) How can you create and manage multiple clouds using terraform
