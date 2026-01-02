@@ -8,13 +8,11 @@
 
 5) Create blue-green deployment and switch traffic between them
 
-6) Manage secrets in Terraform
-
 7) Try this- delete only 1 resource using terraform
 
 8) Write a terraform code for creating EKS ,VPC ,lamdba, RDS  using variables and for different environments.
 
-9) Practice using output values in terraform.
+9) Practice using output values in terraform - Done
 
 10) Try using terraform graph command and explore its use.
 
@@ -23,3 +21,5 @@
 12) Use 'terraform state mv' and 'terraform console' command to clarify its usage.
 
 13) Practice managing secrets in terraform using secrets manager and terraform hcl.
+
+14) How to rollback failed deployment in terraform?
