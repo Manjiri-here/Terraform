@@ -23,3 +23,5 @@
 12) How can you create and manage multiple clouds using terraform
 
 13) Check Abhishek Veeramalla's few videos, it has some additional info.
+
+14) Write pipeline to automatically deploy the terraform file.
