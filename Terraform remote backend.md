@@ -1,8 +1,8 @@
 Creating Terraform remote backend:
  On your AWS CLI run below command to create an s3 bucket: 
 1. Creating a bucket: % aws s3api create-bucket \
-  --bucket my-terraform-state-bucket-08122025 \
-  --region us-east-1
+  --bucket <bucket-name> \
+  --region <your-region>
 
 {
     "Location": "/my-terraform-state-bucket-08122025"
