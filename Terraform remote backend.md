@@ -45,7 +45,9 @@ Creating Terraform remote backend:
     }
 } 
 
-4. Now add this to your main.tf file:  You can add it even before provider block-  terraform {
+4. Now add this to your main.tf file. It should be added in your terraform block: -  
+
+terraform {
   backend "s3" {
     bucket         = "my-terraform-state-bucket-08122025"  # bucket which you created in previous step
     key            = "demo/terraform.tfstate"                               # key path is just folder-like naming inside S3.It doesn’t have to exist before; S3 will create it.
