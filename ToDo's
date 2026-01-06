@@ -2,28 +2,24 @@
 
 2) Practice multi environent scenario in terraform, how will you manage it? - https://spacelift.io/blog/terraform-workspaces
 
-3) Try using terraformer tool once and practice it for few resources.
+3) Create blue-green deployment and switch traffic between them
 
-4) Practice workspaces in terraform
+4) Try this- delete only 1 resource using terraform
 
-5) Create blue-green deployment and switch traffic between them
+5) Write a terraform code for creating EKS ,VPC ,lamdba, RDS  using variables and for different environments.
 
-7) Try this- delete only 1 resource using terraform
+6) Practice using output values in terraform - Done
 
-8) Write a terraform code for creating EKS ,VPC ,lamdba, RDS  using variables and for different environments.
+7) Try using terraform graph command and explore its use.
 
-9) Practice using output values in terraform - Done
+8) Explore server-side encryption and access control policies for s3 bucket created as remote backend.
 
-10) Try using terraform graph command and explore its use.
+9) Use 'terraform state mv' and 'terraform console' command to clarify its usage.
 
-11) Explore server-side encryption and access control policies for s3 bucket created as remote backend.
+10) Practice managing secrets in terraform using secrets manager and terraform hcl.
 
-12) Use 'terraform state mv' and 'terraform console' command to clarify its usage.
+11) How to rollback failed deployment in terraform?
 
-13) Practice managing secrets in terraform using secrets manager and terraform hcl.
+12) How can you create and manage multiple clouds using terraform
 
-14) How to rollback failed deployment in terraform?
-
-15) How can you create and manage multiple clouds using terraform
-
-16) Check Abhishek Veeramalla's few videos, it has some additional info.
+13) Check Abhishek Veeramalla's few videos, it has some additional info.
